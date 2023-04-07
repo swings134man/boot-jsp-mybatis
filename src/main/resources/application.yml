@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ev_music?useSSL=false
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/views/
+
+
+  mybatis:
+    mapper-location: mapper/**/*.xml
