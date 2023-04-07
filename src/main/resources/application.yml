@@ -8,7 +8,10 @@ spring:
     view:
       suffix: .jsp
       prefix: /WEB-INF/views/
+  devtools:
+    livereload:
+      enabled: true
 
 
-  mybatis:
-    mapper-location: mapper/**/*.xml
+mybatis:
+  mapper-locations: mapper/**/*.xml
