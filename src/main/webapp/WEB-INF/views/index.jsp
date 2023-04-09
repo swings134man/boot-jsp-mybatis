@@ -26,13 +26,15 @@
     <hr>
 
     <%--  Server URL 로 이동.  --%>
+    <%--  Server 가 Redirect 해주는 페이지  --%>
     <%--  webapp/WEB-INF/ 아래에 가능 설정에 따라 여기선, /views아래에서 가능.  --%>
     <a href="/list">리스트 테스트 페이지</a>
 
     <hr>
     <%--  webapp 안에 있는 jsp 로 이동  --%>
     <%--  서버를 거치지 않고 사용자가 직접 접근할 수 있음.  --%>
-    <a href="http://localhost:8080/board/BoardInsert.jsp">게시판 작성</a>
+    <a href="http://localhost:8080/board/BoardInsert.jsp">게시판 작성 - fetch 방식</a><br>
+    <a href="http://localhost:8080/board/boardInsert2.jsp">게시판 작성 - form 태그 방식</a>
 
 
 </body>

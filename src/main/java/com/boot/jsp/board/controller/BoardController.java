@@ -41,4 +41,22 @@ public class BoardController {
         return boardDTO;
     }
 
+    // save2 - post
+    // urlencoded not supported 에러시 아래의 방법 사용
+    // @RequestBody 삭제 및 ~
+    //@PostMapping(consumes = "application/x-www-form-urlencoded")
+    @RequestMapping(value = "save2", method = RequestMethod.POST)
+    @ResponseBody
+    public BoardDTO save2(BoardDTO dto) {
+        log.info("Controller {}", dto);
+        return dto;
+    }
+
+    @PostMapping(consumes = "application/x-www-form-urlencoded", value = "save3")
+    @ResponseBody
+    public BoardDTO save3(@RequestBody BoardDTO dto) {
+        log.info("Controller {}", dto);
+        return dto;
+    }
+
 }
