@@ -6,8 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,4 +26,19 @@ public class BoardController {
 
         return "board/boardList";
     }
+
+    // save - post
+    @PostMapping("savePost")
+    @ResponseBody
+    public BoardDTO savePost(@RequestBody BoardDTO dto, Model model) {
+        log.info("Controller = {}", dto);
+        BoardDTO boardDTO = service.boardSave(dto);
+
+        // TODO : 완료 하면 게시판 상세 페이지 조회를 통해 return 할것.
+//        model.addAttribute("boardDTO", dto);
+//        return "board/boardDetail";
+
+        return boardDTO;
+    }
+
 }

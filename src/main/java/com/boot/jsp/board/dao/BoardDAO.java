@@ -21,4 +21,14 @@ public class BoardDAO {
         List<BoardDTO> result = template.selectList("boardMapper.boardList");
         return result;
     }
+
+    // 게시판 save
+    public BoardDTO saveBoard(BoardDTO dto) {
+        int insert = template.insert("boardMapper.boardSave", dto);
+        if(insert == 1) {
+            return dto;
+        }else {
+            throw new RuntimeException("save 실패");
+        }
+    }
 }
