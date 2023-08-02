@@ -36,6 +36,8 @@
     <a href="http://localhost:8080/board/BoardInsert.jsp">게시판 작성 - fetch 방식</a><br>
     <a href="http://localhost:8080/board/boardInsert2.jsp">게시판 작성 - form 태그 방식</a>
 
+    <hr>
+    <a href="http://localhost:8080/test/testOne.jsp">Test One</a>
 
 </body>
 </html>

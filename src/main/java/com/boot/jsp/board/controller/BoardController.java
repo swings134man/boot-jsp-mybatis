@@ -52,6 +52,7 @@ public class BoardController {
         return dto;
     }
 
+    // TODO : 원래 쓰던 @Post('url') + Request Body 써보기
     @PostMapping(consumes = "application/x-www-form-urlencoded", value = "save3")
     @ResponseBody
     public BoardDTO save3(@RequestBody BoardDTO dto) {
